@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 //#import "TRUBaseViewController.h"
 
-#import <IDaaSBoLiSDK/TRUPushAuthModel.h>
+#import "TRUPushAuthModel.h"
 
 @interface TrusfrotEtoekn : NSObject
 @property (copy,nonatomic) NSString *password;

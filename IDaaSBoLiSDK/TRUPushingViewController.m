@@ -5,7 +5,7 @@
 //  Created by hukai on 2018/10/30.
 //  Copyright © 2018年 zyc. All rights reserved.
 //
-#import "TRUBaseViewController.h"
+
 #import "TRUPushingViewController.h"
 #import "xindunsdk.h"
 #import "TRUAuthModel.h"

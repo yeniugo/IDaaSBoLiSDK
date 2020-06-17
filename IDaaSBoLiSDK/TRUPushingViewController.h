@@ -8,7 +8,7 @@
 
 #import "TRUBaseViewController.h"
 //@class TRUBaseViewController;
-#import <IDaaSBoLiSDK/TRUPushAuthModel.h>
+#import "TRUPushAuthModel.h"
 @interface TRUPushingViewController : TRUBaseViewController
 /** 用户ID */
 @property (nonatomic, copy) NSString *userNo;

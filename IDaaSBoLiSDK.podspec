@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IDaaSBoLiSDK'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'A short description of IDaaSBoLiSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -30,19 +30,34 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'IDaaSBoLiSDK/Classes/*','IDaaSBoLiSDK/public/*'
-  s.pod_target_xcconfig = { "HEADER_SEARCH_PATHS" => ["IDaaSBoLiSDK/Classes/*",'IDaaSBoLiSDK/public/*']}
+  s.source_files = 'IDaaSBoLiSDK/*.{h,m}'
+  s.pod_target_xcconfig = { "HEADER_SEARCH_PATHS" => ["IDaaSBoLiSDK/*.h"]}
   s.resource_bundles = {
     'IDaaSBoLiSDK' => ['IDaaSBoLiSDK/Assets/*']
   }
-  s.vendored_libraries = 'IDaaSBoLiSDK/Classes/*.a'
+  s.vendored_libraries = 'IDaaSBoLiSDK/*.a'
   s.libraries = 'resolv'
-  s.public_header_files = 'IDaaSBoLiSDK/public/*.h'
+  s.public_header_files = 'IDaaSBoLiSDK/*.h'
   s.frameworks = 'UIKit', 'Foundation'
   s.dependency 'AFNetworking','3.1.0'
   s.dependency 'Masonry'
   s.dependency 'YYModel'
   s.dependency 'MBProgressHUD','1.0.0'
 
+#  s.subspec 'Ext' do |ss|
+#    ss.source_files = 'IDaaSBoLiSDK/*.{h,m}'
+#    #ss.exclude_files = 'IDaaSBoLiSDK/IDaaSBoLiSDK.h'
+#    ss.vendored_libraries = 'IDaaSBoLiSDK/*.a'
+#    ss.frameworks = 'UIKit', 'Foundation'
+#    ss.dependency 'AFNetworking','3.1.0'
+#    ss.dependency 'Masonry'
+#    ss.dependency 'YYModel'
+#    ss.dependency 'MBProgressHUD','1.0.0'
+#    ss.libraries = 'resolv'
+#    s.pod_target_xcconfig = { "HEADER_SEARCH_PATHS" => ["IDaaSBoLiSDK/*.h"]}
+#    ss.resource_bundles = {
+#      'IDaaSBoLiSDK' => ['IDaaSBoLiSDK/Assets/*']
+#    }
+#  end
   # s.prefix_header_contents = ['#import <UIKit/UIKit.h>', '#import <Foundation/Foundation.h>']
 end
