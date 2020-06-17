@@ -25,22 +25,24 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'yeniugo' => 'hukaihope@gmail.com' }
-  s.source           = { :git => 'https://github.com/yeniugo/IDaaSBoLiSDK.git', :tag => s.version.to_s }
+  s.source           = { :git => '/Users/hukai/Documents/git/MyRepo/IDaaSBoLiSDK', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'IDaaSBoLiSDK/Classes/base/*','IDaaSBoLiSDK/Classes/ext/*','IDaaSBoLiSDK/Classes/Model/*','IDaaSBoLiSDK/Classes/Xindun/*','IDaaSBoLiSDK/Classes/public/*'
-  
+  s.source_files = 'IDaaSBoLiSDK/Classes/*','IDaaSBoLiSDK/public/*'
+  s.pod_target_xcconfig = { "HEADER_SEARCH_PATHS" => ["IDaaSBoLiSDK/Classes/*",'IDaaSBoLiSDK/public/*']}
   s.resource_bundles = {
     'IDaaSBoLiSDK' => ['IDaaSBoLiSDK/Assets/*']
   }
-  s.vendored_libraries = 'IDaaSBoLiSDK/Classes/Xindun/*.a'
+  s.vendored_libraries = 'IDaaSBoLiSDK/Classes/*.a'
   s.libraries = 'resolv'
-  s.public_header_files = 'IDaaSBoLiSDK/Classes/public/*.h'
+  s.public_header_files = 'IDaaSBoLiSDK/public/*.h'
   s.frameworks = 'UIKit', 'Foundation'
   s.dependency 'AFNetworking','3.1.0'
   s.dependency 'Masonry'
   s.dependency 'YYModel'
   s.dependency 'MBProgressHUD','1.0.0'
+
+  # s.prefix_header_contents = ['#import <UIKit/UIKit.h>', '#import <Foundation/Foundation.h>']
 end
