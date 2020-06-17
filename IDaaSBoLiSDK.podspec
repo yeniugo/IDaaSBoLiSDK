@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IDaaSBoLiSDK'
-  s.version          = '0.1.0'
+  s.version          = '0.0.1'
   s.summary          = 'A short description of IDaaSBoLiSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+描述
                        DESC
 
   s.homepage         = 'https://github.com/yeniugo/IDaaSBoLiSDK'
@@ -30,13 +30,17 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'IDaaSBoLiSDK/Classes/**/*'
+  s.source_files = 'IDaaSBoLiSDK/Classes/base/*','IDaaSBoLiSDK/Classes/ext/*','IDaaSBoLiSDK/Classes/Model/*','IDaaSBoLiSDK/Classes/Xindun/*','IDaaSBoLiSDK/Classes/public/*'
   
-  # s.resource_bundles = {
-  #   'IDaaSBoLiSDK' => ['IDaaSBoLiSDK/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.resource_bundles = {
+    'IDaaSBoLiSDK' => ['IDaaSBoLiSDK/Assets/*']
+  }
+  s.vendored_libraries = 'IDaaSBoLiSDK/Classes/Xindun/*.a'
+  s.libraries = 'resolv'
+  s.public_header_files = 'IDaaSBoLiSDK/Classes/public/*.h'
+  s.frameworks = 'UIKit', 'Foundation'
+  s.dependency 'AFNetworking','3.1.0'
+  s.dependency 'Masonry'
+  s.dependency 'YYModel'
+  s.dependency 'MBProgressHUD','1.0.0'
 end

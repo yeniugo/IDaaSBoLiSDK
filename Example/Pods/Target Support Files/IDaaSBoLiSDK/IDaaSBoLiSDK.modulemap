@@ -1,0 +1,6 @@
+framework module IDaaSBoLiSDK {
+  umbrella header "IDaaSBoLiSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

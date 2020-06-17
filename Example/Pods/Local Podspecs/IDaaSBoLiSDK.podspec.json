@@ -1,0 +1,22 @@
+{
+  "name": "IDaaSBoLiSDK",
+  "version": "0.1.0",
+  "summary": "A short description of IDaaSBoLiSDK.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/yeniugo/IDaaSBoLiSDK",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "yeniugo": "hukaihope@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/yeniugo/IDaaSBoLiSDK.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "IDaaSBoLiSDK/Classes/**/*"
+}
